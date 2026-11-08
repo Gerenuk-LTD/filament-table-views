@@ -1,0 +1,156 @@
+.fi-tv-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.fi-tv-bar-tabs {
+    min-width: 0;
+    margin-inline: 0;
+    overflow-x: auto;
+}
+
+.fi-tv-bar-tab-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.fi-tv-bar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-inline-start: auto;
+}
+
+.fi-tv-manager {
+    display: grid;
+    gap: 1rem;
+}
+
+.fi-tv-manager-empty {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    text-align: center;
+    padding-block: 1.5rem;
+}
+
+.fi-tv-manager-list {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.fi-tv-manager-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+}
+
+.fi-tv-manager-item:hover,
+.fi-tv-manager-item.fi-active {
+    background-color: var(--gray-50);
+}
+
+.dark .fi-tv-manager-item:hover,
+.dark .fi-tv-manager-item.fi-active {
+    background-color: color-mix(in oklab, var(--color-white) 5%, transparent);
+}
+
+.fi-tv-manager-item-apply {
+    display: grid;
+    flex: 1;
+    min-width: 0;
+    gap: 0.125rem;
+    text-align: start;
+    cursor: pointer;
+}
+
+.fi-tv-manager-item-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-950);
+}
+
+.dark .fi-tv-manager-item-name {
+    color: var(--color-white);
+}
+
+.fi-tv-manager-item.fi-active .fi-tv-manager-item-name {
+    color: var(--primary-600);
+}
+
+.dark .fi-tv-manager-item.fi-active .fi-tv-manager-item-name {
+    color: var(--primary-400);
+}
+
+.fi-tv-manager-item-meta {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    padding-inline-start: 1.75rem;
+}
+
+.fi-tv-manager-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Filament's toggle-button states would repaint the circles; keep each circle its own colour. */
+.fi-tv-color-picker .fi-btn {
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    border-radius: 9999px;
+    background-color: var(--color-500, var(--gray-500)) !important;
+    box-shadow: none;
+}
+
+.fi-tv-color-picker .fi-btn:hover {
+    opacity: 0.85;
+}
+
+.fi-tv-color-picker .fi-btn[aria-pressed="true"] {
+    background-color: var(--color-500, var(--gray-500)) !important;
+    outline: 2px solid var(--color-500, var(--gray-500));
+    outline-offset: 2px;
+}
+
+.fi-tv-color-picker .fi-btn:focus-visible {
+    outline: 2px solid var(--primary-500);
+    outline-offset: 2px;
+}
+
+.fi-tv-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fi-tv-icon[style] {
+    color: var(--tv-icon-color);
+}
+
+.dark .fi-tv-icon[style] {
+    color: var(--tv-icon-dark-color);
+}
+
+.fi-tv-modified-dot {
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 9999px;
+    background-color: var(--warning-500);
+}
+
+.fi-tv-bar-tabs [x-sortable-handle] {
+    cursor: grab;
+}
+
+.fi-tv-bar-tabs .fi-sortable-ghost {
+    opacity: 0.4;
+}
